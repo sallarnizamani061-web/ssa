@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10K$ Reward Program</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #f0f2f5;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .bonus-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 60px 40px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      border: 1px solid #dddfe2;
+      transition: transform 0.3s ease;
+    }
+
+    .bonus-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .icon-wrapper {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 28px;
+      background: #1877F2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+    }
+
+    .icon {
+      font-size: 48px;
+      color: #ffffff;
+    }
+
+    h1 {
+      margin: 0 0 20px 0;
+      font-size: 30px;
+      font-weight: 800;
+      color: #1c1e21;
+      line-height: 1.3;
+    }
+
+    .description {
+      margin: 0 0 36px 0;
+      font-size: 18px;
+      color: #606770;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    .bonus-button {
+      width: 100%;
+      padding: 18px 36px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      background: #1877F2;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease;
+      box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+      letter-spacing: 0.3px;
+    }
+
+    .bonus-button:hover {
+      background: #166fe5;
+      transform: translateY(-2px);
+    }
+
+    .bonus-button:active {
+      background: #155bd3;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 640px) {
+      .bonus-card {
+        padding: 48px 28px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      .description {
+        font-size: 17px;
+      }
+      .bonus-button {
+        font-size: 18px;
+        padding: 16px 28px;
+      }
+    }
+  </style>
+ </head>
+ <body>
+  <div class="bonus-card">
+    <div class="icon-wrapper">
+      <div class="icon">💰</div>
+    </div>
+    <h1>You’re Invited for 10K$ Reward Program</h1>
+    <p class="description">
+      Join our exclusive reward opportunity and unlock your $10,000 program benefit.  
+      Click below to get started instantly!
+    </p>
+    <button class="bonus-button" id="bonus-button">Claim Your Reward</button>
+  </div>
+
+  <script>
+    const redirectURL = "next.html";
+    let isClaimed = false;
+
+    function claimBonus() {
+      if (isClaimed) return;
+      isClaimed = true;
+      const button = document.getElementById('bonus-button');
+      button.textContent = 'Redirecting...';
+      setTimeout(() => {
+        window.location.href = redirectURL;
+      }, 1000);
+    }
+
+    document.getElementById('bonus-button').addEventListener('click', claimBonus);
+  </script>
+ 
+
+</body></html>
